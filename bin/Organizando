@@ -1,0 +1,4 @@
+private String name;
+    private int cpf;
+    private String email;
+    private String password;

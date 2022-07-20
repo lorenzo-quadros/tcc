@@ -29,37 +29,52 @@ public class CadastroCli extends JFrame {
     private JPanel painel;
     private JPanel botao;
     
+    private FlowLayout layout;
+    
     
     public CadastroCli(){
         
      super("CadastroCli"); 
-     this.setLayout(new FlowLayout());
+     
+     this.layout = new FlowLayout();
+     this.setLayout(layout);
+     
      
      this.nome = new JLabel("Nome"); 
      this.cpflable = new JLabel("Cpf");
      this.emaillable = new JLabel("Email");
      this.passwordlable = new JLabel("Senha");
      
-     this.cadastro = new JButton();
+     this.cadastro = new JButton("Cadastro");
      
      this.painel = new JPanel();
      this.botao = new JPanel();
      
      
-     
+     //Painel de informações
      
      this.painel.setLayout(new MigLayout());
      this.painel.setPreferredSize(new Dimension(400, 500));
      this.painel.setBackground(Color.cyan);
      
+     
      this.painel.add(nome, "wrap");
      this.painel.add(cpflable, "wrap");
      this.painel.add(emaillable, "wrap");
      this.painel.add(passwordlable);
+     
+     //painel de botões
+     
+     this.botao.setLayout(new BorderLayout());
+     this.botao.setPreferredSize(new Dimension(100,100));
+     this.botao.setBackground(Color.blue);
+     
+     this.botao.add(cadastro);
+     
+     //area para adicionar no layout
         
-       
-        
-     add(painel, BorderLayout.CENTER);   
+     add(painel);
+     add(botao);
         
         
     }
